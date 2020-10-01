@@ -12,34 +12,13 @@
 </head>
 
 <body>
-    <div>Main Page</div>
-    <p>track script eles added</p>
-    <p>form script eles added</p>
-    <script id="00001726-j4rkkse0h2k">
-        (function (au, to, mi, zy) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    mi = to.createElement("div");
-                    zy = to.getElementById("00001726-j4rkkse0h2k");
-                    zy.parentNode.insertBefore(mi, zy.nextSibling);
-                    mi.innerHTML = this.responseText;
-                    var scripts = Array.prototype.slice.call(mi.getElementsByTagName("script"));
-                    for (var i = 0; i < scripts.length; i++) {
-                        if (scripts[i].src != "") {
-                            var tag = document.createElement("script");
-                            tag.src = scripts[i].src;
-                            document.getElementsByTagName("head")[0].appendChild(tag);
-                        } else {
-                            eval(scripts[i].innerHTML);
-                        }
-                    }
-                }
-            };
-            xhr.open("GET", "https://gateway-admin.automizy.com/v2/forms/embed/9F0xvtV-zRaDSEKPtSvxUo3IN4F6EXKPMn6sKnwFA-4/vFm1jUWU_7guLeytPl3Xd7FoNbc?frameless=1");
-            xhr.responseType = "text";
-            xhr.send();
-        })(window, document)
+    <script src="https://editor.unlayer.com/embed.js"></script>
+    <div id="editor"></div>
+    <script>
+        unlayer.init({
+            id: 'editor',
+            projectId: 6298
+        })
     </script>
 </body>
 
